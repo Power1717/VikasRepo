@@ -1,83 +1,47 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
 public class Main {
-
-    // Student class
-    static class Student {
-        private int id;
-        private String name;
-        private int age;
-
-        public Student(int id, String name, int age) {
-            this.id = id;
-            this.name = name;
-            this.age = age;
-        }
-
-        @Override
-        public String toString() {
-            return "Student{id=" + id + ", name='" + name + "', age=" + age + "}";
-        }
-    }
-
-    // Service class
-    static class StudentService {
-        private List<Student> students = new ArrayList<>();
-
-        public void addStudent(Student student) {
-            students.add(student);
-        }
-
-        public List<Student> getAllStudents() {
-            return students;
-        }
-    }
-
-    // Main method
     public static void main(String[] args) {
-        StudentService service = new StudentService();
-        Scanner scanner = new Scanner(System.in);
+        displayGreeting();
+        System.out.println();
+        displayIndianFlag();
+    }
 
-        while (true) {
-            System.out.println("\n1. Add Student");
-            System.out.println("2. View Students");
-            System.out.println("3. Exit");
-            System.out.print("Choose option: ");
+    // Display Republic Day Greeting
+    public static void displayGreeting() {
+        System.out.println("╔════════════════════════════════════════════════╗");
+        System.out.println("║      🇮🇳 HAPPY REPUBLIC DAY 2026 🇮🇳           ║");
+        System.out.println("║         January 26th - Republic Day             ║");
+        System.out.println("║  Celebrating India's Journey to Democracy      ║");
+        System.out.println("╚════════════════════════════════════════════════╝");
+        System.out.println();
+        System.out.println("     \"Freedom is not given, it is taken.\"");
+        System.out.println("            - Netaji Subhas Chandra Bose");
+    }
 
-            int choice = scanner.nextInt();
+    // Display Indian Flag using ASCII Art
+    public static void displayIndianFlag() {
+        System.out.println("\n" + " ".repeat(20) + "INDIAN FLAG");
+        System.out.println();
+        
+        // Orange stripe
+        for (int i = 0; i < 4; i++) {
+            System.out.println("  " + "█".repeat(50) + " (Saffron - Courage & Sacrifice)");
+        }
 
-            switch (choice) {
-                case 1:
-                    System.out.print("Enter ID: ");
-                    int id = scanner.nextInt();
-
-                    System.out.print("Enter Name: ");
-                    String name = scanner.next();
-
-                    System.out.print("Enter Age: ");
-                    int age = scanner.nextInt();
-
-                    service.addStudent(new Student(id, name, age));
-                    System.out.println("Student added successfully!");
-                    break;
-
-                case 2:
-                    System.out.println("\nStudents List:");
-                    for (Student s : service.getAllStudents()) {
-                        System.out.println(s);
-                    }
-                    break;
-
-                case 3:
-                    System.out.println("Goodbye!");
-                    scanner.close();
-                    return;
-
-                default:
-                    System.out.println("Invalid option!");
+        // White stripe with Ashoka Chakra
+        for (int i = 0; i < 4; i++) {
+            if (i == 1 || i == 2) {
+                System.out.println("  " + "█".repeat(22) + "☸" + "█".repeat(22) + " (White - Peace & Truth)");
+            } else {
+                System.out.println("  " + "█".repeat(50) + " (White - Peace & Truth)");
             }
         }
+
+        // Green stripe
+        for (int i = 0; i < 4; i++) {
+            System.out.println("  " + "█".repeat(50) + " (Green - Fertility & Growth)");
+        }
+        
+        System.out.println();
+        System.out.println("  Legend: ☸ = Ashoka Chakra (24 spokes of righteousness)");
     }
 }
