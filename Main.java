@@ -14,7 +14,11 @@ public class Main {
         System.out.println("╚════════════════════════════════════════════════╝");
         System.out.println();
         System.out.println("     \"Freedom is not given, it is taken.\"");
+<<<<<<< HEAD
         System.out.println("            - hhh AP Netaji Subhas Chandra Bose");
+=======
+        System.out.println("            -SP Netaji Subhas Chandra Bose");
+>>>>>>> d77dd826e22b3c1f91071977266f6f1f8fca6868
     }
 
     // Display Indian Flag using ASCII Art
