@@ -8,7 +8,7 @@ public class Main {
     // Display Republic Day Greeting
     public static void displayGreeting() {
         System.out.println("╔════════════════════════════════════════════════╗");
-        System.out.println("║      🇮🇳 HAPPY REPUBLIC DAY 2026 🇮🇳           ║");
+        System.out.println("║      🇮🇳 HAPPY REPUBLIC DAY 2027 🇮🇳           ║");
         System.out.println("║         January 26th - Republic Day             ║");
         System.out.println("║  Celebrating India's Journey to Democracy      ║");
         System.out.println("╚════════════════════════════════════════════════╝");
